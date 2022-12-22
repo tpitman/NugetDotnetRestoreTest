@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  nugetdotnetrestoretest:
+    platform: linux/amd64
+    image: ${DOCKER_REGISTRY-}nugetdotnetrestoretest
+    build:
+      context: .
+      dockerfile: NugetDotnetRestoreTest/Dockerfile
