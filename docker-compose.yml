@@ -4,6 +4,8 @@ services:
   nugetdotnetrestoretest:
     platform: linux/amd64
     image: ${DOCKER_REGISTRY-}nugetdotnetrestoretest
+    stdin_open: true
+    tty: true
     build:
       context: .
       dockerfile: NugetDotnetRestoreTest/Dockerfile
